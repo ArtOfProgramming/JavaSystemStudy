@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>JavaSystemStudy</artifactId>
+    <groupId>com.daiwei</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <modules>
+    <module>usb-test</module>
+    <module>doudizhu-test</module>
+    <module>canchangeparam-test</module>
+    <module>throwable-test</module>
+    <module>thread-test</module>
+    <module>chibaozi-test</module>
+    <module>executor-test</module>
+    <module>lambda-test</module>
+    <module>file-test</module>
+    <module>recursion-test</module>
+    <module>recursion-test</module>
+    <module>stream-test</module>
+    <module>properties-test</module>
+    <module>socket-test</module>
+    <module>functional-interface-test</module>
+    <module>stream-test</module>
+    <module>method-reference-test</module>
+    <module>junit-test</module>
+    <module>reflect-test</module>
+    <module>annotation-test</module>
+    <module>collection-test</module>
+    <module>io-stream-test</module>
+    <module>map-test</module>
+    <module>selfstruct-test</module>
+    <module>stringbuilder-test</module>
+    <module>redpacket-test</module>
+  </modules>
+
+  <artifactId>java-basic</artifactId>
+
+
+</project>

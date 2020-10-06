@@ -1,0 +1,2 @@
+com.daiwei.bean.Person:name=daiwei:age=18
+com.daiwei.bean.Cat:name=jiafeimao:age=3

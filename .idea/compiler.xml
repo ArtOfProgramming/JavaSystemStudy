@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="io-stream-test" />
+        <module name="lambda-test" />
+        <module name="selfstruct-test" />
+        <module name="transaction-test" />
+        <module name="thread-test" />
+        <module name="permutation" />
+        <module name="search" />
+        <module name="stream-test" />
+        <module name="leetcode" />
+        <module name="recursion-test" />
+        <module name="linkedlist" />
+        <module name="functional-interface-test" />
+        <module name="socket-test" />
+        <module name="ZeroCopy" />
+        <module name="hashTable" />
+        <module name="map-test" />
+        <module name="throwable-test" />
+        <module name="properties-test" />
+        <module name="executor-test" />
+        <module name="state" />
+        <module name="BIO" />
+        <module name="stringbuilder-test" />
+        <module name="NIO" />
+        <module name="doudizhu-test" />
+        <module name="recursion" />
+        <module name="method-reference-test" />
+        <module name="tree" />
+        <module name="filterchian" />
+        <module name="queue" />
+        <module name="thread" />
+        <module name="javabasic" />
+        <module name="collection-test" />
+        <module name="aoptest" />
+        <module name="file-test" />
+        <module name="array" />
+        <module name="junit-test" />
+        <module name="builder" />
+        <module name="algorithm" />
+        <module name="graph" />
+        <module name="Hash" />
+        <module name="object" />
+        <module name="sort" />
+        <module name="stack" />
+        <module name="annotation-test" />
+        <module name="redis" />
+        <module name="NettyDemo" />
+        <module name="ioctest" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="algorithm" target="1.8" />
+      <module name="annotation-test" target="1.8" />
+      <module name="aoptest" target="1.8" />
+      <module name="array" target="1.8" />
+      <module name="BIO" target="1.8" />
+      <module name="builder" target="1.8" />
+      <module name="canchangeparam-test" target="1.8" />
+      <module name="chibaozi-test" target="1.8" />
+      <module name="collection-test" target="1.8" />
+      <module name="datastruct" target="1.8" />
+      <module name="designpattern" target="1.8" />
+      <module name="doudizhu-test" target="1.8" />
+      <module name="executor-test" target="1.8" />
+      <module name="file-test" target="1.8" />
+      <module name="FilterChain" target="1.8" />
+      <module name="filterchian" target="1.8" />
+      <module name="functional-interface-test" target="1.8" />
+      <module name="graph" target="1.8" />
+      <module name="Hash" target="1.8" />
+      <module name="hashTable" target="1.8" />
+      <module name="io-stream-test" target="1.8" />
+      <module name="ioctest" target="1.8" />
+      <module name="javabasic" target="1.8" />
+      <module name="JavaSystemStudy" target="1.8" />
+      <module name="junit-test" target="1.8" />
+      <module name="lambda-test" target="1.8" />
+      <module name="leetcode" target="1.8" />
+      <module name="linkedlist" target="1.8" />
+      <module name="map-test" target="1.8" />
+      <module name="method-reference-test" target="1.8" />
+      <module name="Netty" target="1.8" />
+      <module name="NettyDemo" target="1.8" />
+      <module name="NIO" target="1.8" />
+      <module name="object" target="1.8" />
+      <module name="permutation" target="1.8" />
+      <module name="properties-test" target="1.8" />
+      <module name="queue" target="1.8" />
+      <module name="recursion" target="1.8" />
+      <module name="recursion-test" target="1.8" />
+      <module name="redis" target="1.8" />
+      <module name="redpacket-test" target="1.8" />
+      <module name="reflect-test" target="1.8" />
+      <module name="search" target="1.8" />
+      <module name="selfstruct-test" target="1.8" />
+      <module name="socket-test" target="1.8" />
+      <module name="sort" target="1.8" />
+      <module name="Spring5" target="1.8" />
+      <module name="stack" target="1.8" />
+      <module name="state" target="1.8" />
+      <module name="stream-test" target="1.8" />
+      <module name="stringbuilder-test" target="1.8" />
+      <module name="thread" target="1.8" />
+      <module name="thread-test" target="1.8" />
+      <module name="threadandconcurrent" target="1.8" />
+      <module name="throwable-test" target="1.8" />
+      <module name="transaction-test" target="1.8" />
+      <module name="tree" target="1.8" />
+      <module name="usb-test" target="1.8" />
+      <module name="ZeroCopy" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

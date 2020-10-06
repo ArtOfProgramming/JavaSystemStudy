@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+  <context:component-scan base-package="com.daiwei"></context:component-scan>
+
+  <bean name="user" class="com.daiwei.bean.User" p:name="daiwei" p:age="20" init-method="init" destroy-method="destroy">
+<!--    <property name="name" value="daiwei"></property>-->
+<!--    <property name="age" value="18"></property>-->
+<!--    <constructor-arg name="name" value="daiwei"></constructor-arg>-->
+<!--    <constructor-arg name="age" value="19"></constructor-arg>-->
+    <property name="contactNames">
+      <array>
+        <value>friend1</value>
+        <value>friend2</value>
+      </array>
+    </property>
+  </bean>
+
+<bean name="testPost" class="com.daiwei.bean.TestPost"></bean>
+
+<!--  <bean name="userFactoryBean" class="UserFactoryBean"></bean>-->
+</beans>
