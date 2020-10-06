@@ -1,2 +1,0 @@
-class:com.daiwei.bean.Person:daiwei:18
-class:com.daiwei.bean.Cat:jiafeimao:3

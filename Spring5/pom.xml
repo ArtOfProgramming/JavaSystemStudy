@@ -12,9 +12,9 @@
   <artifactId>Spring5</artifactId>
   <packaging>pom</packaging>
   <modules>
-    <module>ioc-test</module>
-    <module>aop-test</module>
-    <module>transaction-test</module>
+    <module>ioc</module>
+    <module>aop</module>
+    <module>transaction</module>
   </modules>
 
   <dependencies>
@@ -54,4 +54,5 @@
       <version>8.0.18</version>
     </dependency>
   </dependencies>
+
 </project>

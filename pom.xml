@@ -11,15 +11,13 @@
     <modules>
         <module>data-struct</module>
         <module>design-pattern</module>
-      <module>permutation</module>
+        <module>leetcode</module>
+        <module>thread-and-concurrent</module>
+        <module>java-basic</module>
+        <module>junit</module>
+        <module>self-struct</module>
+        <module>Netty</module>
         <module>Spring5</module>
-      <module>redis</module>
-      <module>thread-and-concurrent</module>
-      <module>leetcode</module>
-      <module>object</module>
-      <module>Netty</module>
-      <module>java-basic</module>
     </modules>
-
 
 </project>

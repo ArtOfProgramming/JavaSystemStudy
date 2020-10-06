@@ -10,13 +10,17 @@
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>Netty</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-    <module>BIO</module>
-    <module>NIO</module>
-    <module>ZeroCopy</module>
-    <module>NettyDemo</module>
-  </modules>
 
-
+  <dependencies>
+    <dependency>
+      <groupId>io.netty</groupId>
+      <artifactId>netty-all</artifactId>
+      <version>4.1.20.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.protobuf</groupId>
+      <artifactId>protobuf-java</artifactId>
+      <version>3.6.1</version>
+    </dependency>
+  </dependencies>
 </project>
