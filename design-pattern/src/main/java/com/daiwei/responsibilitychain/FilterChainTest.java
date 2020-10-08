@@ -3,6 +3,9 @@ package com.daiwei.responsibilitychain;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 责任链模式 使用：netty pipeline
+ */
 public class FilterChainTest implements FilterTest {
 
     List<FilterTest> filters = new ArrayList<>();

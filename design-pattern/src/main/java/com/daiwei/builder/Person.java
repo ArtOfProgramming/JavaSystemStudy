@@ -1,5 +1,8 @@
 package com.daiwei.builder;
 
+/**
+ * 建造者模式 使用：配置类
+ */
 public class Person {
 
     private String name;

@@ -1,4 +1,4 @@
-package com.daiwei.nettydemo.protobuf;
+package com.daiwei.nettydemo.protobufcodec;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;

@@ -9,13 +9,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>design-pattern</artifactId>
+  <artifactId>mq</artifactId>
 
-  <dependencies>
-    <dependency>
-      <groupId>cglib</groupId>
-      <artifactId>cglib</artifactId>
-      <version>3.2.12</version>
-    </dependency>
-  </dependencies>
+
 </project>

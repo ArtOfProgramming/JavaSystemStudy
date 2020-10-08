@@ -35,14 +35,14 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
         ByteBuf buf = (ByteBuf) msg;
         System.out.println("客户端发送消息是:" + buf.toString(CharsetUtil.UTF_8));
         System.out.println("客户端地址:" + channel.remoteAddress());
-        ctx.channel().eventLoop().execute(() -> {
-            try {
-                Thread.sleep(1000);
-                ctx.writeAndFlush(Unpooled.copiedBuffer("daiwei nihao", CharsetUtil.UTF_8));
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        });
+//        ctx.channel().eventLoop().execute(() -> {
+//            try {
+//                Thread.sleep(1000);
+//                ctx.writeAndFlush(Unpooled.copiedBuffer("daiwei nihao", CharsetUtil.UTF_8));
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        });
     }
 
     /**
@@ -54,7 +54,7 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
         // 将数据写入到缓冲并刷新
         // 一般讲，我们对这个发送的数据进行编码
-        ctx.writeAndFlush(Unpooled.copiedBuffer("hello, 客户端", CharsetUtil.UTF_8));
+//        ctx.writeAndFlush(Unpooled.copiedBuffer("hello, 客户端", CharsetUtil.UTF_8));
     }
 
     /**

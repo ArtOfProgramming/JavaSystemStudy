@@ -1,20 +1,16 @@
-package com.daiwei.nettydemo.protobuf;
+package com.daiwei.nettydemo.protobufcodec;
 
 import com.daiwei.nettydemo.protobuf.StudentPOJO.Student;
-import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
-import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-import io.netty.channel.ChannelPipeline;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.util.CharsetUtil;
 
 /**
  * 使用SimpleChannelInboundHandler 可以不用强转类型
  */
-//public class NettyServerHandler extends ChannelInboundHandlerAdapter {
-public class NettyServerHandler extends SimpleChannelInboundHandler<StudentPOJO.Student> {
+public class NettyServerHandler extends ChannelInboundHandlerAdapter {
     /**
      * 读取数据实际（这里我们可以读取客户端发送的消息）
      * @param ctx 上下文对象，含有 管道pipeline， 通道channel，地址
@@ -30,7 +26,7 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<StudentPOJO.
 
 
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, Student msg) throws Exception {
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         System.out.printf("收到客户端的数据：" + msg.toString());
     }
 
