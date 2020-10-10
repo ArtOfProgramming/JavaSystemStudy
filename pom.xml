@@ -19,6 +19,7 @@
         <module>Netty</module>
         <module>Spring5</module>
       <module>mq</module>
+      <module>JDBC</module>
     </modules>
 
 </project>

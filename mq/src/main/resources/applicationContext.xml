@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--  开启包自动扫描-->
+  <context:component-scan base-package="com.daiwei.activemq.spring"></context:component-scan>
+
+<!--  配置生产者-->
+  <bean id="jmsFactory" class="org.apache.activemq.pool.PooledConnectionFactory" destroy-method="stop">
+    <property name="connectionFactory">
+<!--      真正可以生产Connection的ConnectionFactory,由对应的JMS服务厂商提供-->
+      <bean class="org.apache.activemq.ActiveMQConnectionFactory">
+        <property name="brokerURL" value="tcp://192.168.173.130:61616"></property>
+      </bean>
+    </property>
+    <property name="maxConnections" value="100"></property>
+  </bean>
+<!--******************** 配置队列queue-->
+<!--  配置目的地-->
+  <bean id="destinationQueue" class="org.apache.activemq.command.ActiveMQQueue">
+    <constructor-arg index="0" value="spring-active-queue"></constructor-arg>
+  </bean>
+
+<!--  Spring提供的JMS工具类，它可以进行消息发送、接收等-->
+  <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+    <property name="connectionFactory" ref="jmsFactory"></property>
+    <property name="defaultDestination" ref="destinationQueue"></property>
+    <property name="messageConverter">
+      <bean class="org.springframework.jms.support.converter.SimpleMessageConverter"></bean>
+    </property>
+  </bean>
+
+<!--********************配置主题topic-->
+
+  <bean id="destinationTopic" class="org.apache.activemq.command.ActiveMQTopic">
+    <constructor-arg index="0" value="spring-active-topic"></constructor-arg>
+  </bean>
+  <bean id="jmsTemplate1" class="org.springframework.jms.core.JmsTemplate">
+    <property name="connectionFactory" ref="jmsFactory"></property>
+    <property name="defaultDestination" ref="destinationTopic"></property>
+    <property name="messageConverter">
+      <bean class="org.springframework.jms.support.converter.SimpleMessageConverter"></bean>
+    </property>
+  </bean>
+
+<!--  配置监听器-->
+<!--  <bean id="jmsContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer">-->
+<!--    <property name="connectionFactory" ref="jmsFactory"></property>-->
+<!--    <property name="destination" ref="destinationQueue"></property>-->
+<!--    <property name="messageListener" ref="myMessageListener"></property>-->
+<!--  </bean>-->
+    <bean id="jmsContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+      <property name="connectionFactory" ref="jmsFactory"></property>
+      <property name="destination" ref="destinationTopic"></property>
+      <property name="messageListener" ref="myMessageListener1"></property>
+    </bean>
+</beans>
