@@ -20,6 +20,7 @@
         <module>Spring5</module>
       <module>mq</module>
       <module>JDBC</module>
+        <module>redis</module>
     </modules>
 
 </project>
