@@ -5,6 +5,7 @@ public class StringBuilderTest {
     public static void main(String[] args) {
         String str = "daiwei";
         StringBuilder sb = new StringBuilder(str);
+        StringBuffer sf = new StringBuffer();
 //        System.out.println(str.hashCode());
 //        System.out.println(sb.toString().hashCode());
         System.out.println(str == sb.toString());

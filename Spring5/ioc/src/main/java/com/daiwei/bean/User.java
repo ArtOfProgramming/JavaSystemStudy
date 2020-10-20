@@ -1,6 +1,8 @@
 package com.daiwei.bean;
 
 import java.util.Arrays;
+import org.springframework.stereotype.Component;
+@Component
 public class User {
 
     private String name;

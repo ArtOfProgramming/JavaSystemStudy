@@ -3,6 +3,7 @@ package com.daiwei.jdbc;
 import com.daiwei.jdbc.bean.User;
 import com.daiwei.jdbc.util.JdbcUtils;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ public class JdbcTest {
         Connection connection = null;
         Statement statement = null;
         ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
         try {
 
             // 1.导入驱动jar包
@@ -31,8 +33,13 @@ public class JdbcTest {
             int count = statement.executeUpdate("insert into user (age, name, balance) values (14, 'hai', 20)");
             count = statement.executeUpdate("update  user set balance = 300 where name='hai'");
             count = statement.executeUpdate("delete from user  where name='hai'");
+            count = statement.executeUpdate("insert into user (age, name, balance) values (14, 'hai', 20)");
+            preparedStatement = connection.prepareStatement("select * from user where name = ? and age = ?");
+            preparedStatement.setString(1, "hai or 1=1 or");
+            preparedStatement.setInt(2, 11);
+            resultSet = preparedStatement.executeQuery();
             // 6.执行Sql
-            resultSet = statement.executeQuery(sql);
+            // resultSet = statement.executeQuery(sql);
             List<User> users = new ArrayList<>();
             while (resultSet.next()) {
                 User user = new User();

@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.daiwei</groupId>
-    <artifactId>JavaSystemStudy</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>data-struct</module>
-        <module>design-pattern</module>
-        <module>leetcode</module>
-        <module>thread-and-concurrent</module>
-        <module>java-basic</module>
-        <module>junit</module>
-        <module>self-struct</module>
-        <module>Netty</module>
-        <module>Spring5</module>
-      <module>mq</module>
-      <module>JDBC</module>
-        <module>redis</module>
-    </modules>
+  <groupId>com.daiwei</groupId>
+  <artifactId>JavaSystemStudy</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>data-struct</module>
+    <module>design-pattern</module>
+    <module>leetcode</module>
+    <module>thread-and-concurrent</module>
+    <module>java-basic</module>
+    <module>junit</module>
+    <module>self-struct</module>
+    <module>Netty</module>
+    <module>Spring5</module>
+    <module>mq</module>
+    <module>JDBC</module>
+    <module>redis</module>
+    <module>async</module>
+    <module>mytomcat</module>
+    <module>SpringMVC</module>
+    <module>mybatis</module>
+    <module>mybatis-generator</module>
+  </modules>
 
 </project>

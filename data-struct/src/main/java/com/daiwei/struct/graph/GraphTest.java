@@ -21,8 +21,8 @@ public class GraphTest {
 
         graph.showGraph();
 
-//        graph.dfs();
-        graph.bfs();
+        graph.dfs();
+//        graph.bfs();
     }
 }
 

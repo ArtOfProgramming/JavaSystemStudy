@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.daiwei.dao.EmpDao">
+  <select id="save" resultType="com.daiwei.bean.Emp">
+    insert into emp (empNo, eName, job, mgr, hireDate, sal, comm, deptNo)
+    values ( #{empNo}, #{eName}, #{job}, #{mgr}, #{hireDate}, #{sal}, #{comm}, #{deptNo})
+  </select>
+  <select id="update" resultType="com.daiwei.bean.Emp">
+    update emp 
+    <set>
+      <if test="eName != null">
+        eName = #{eName},
+      </if>
+      <if test="job!= null">
+        job = #{job},
+<!-- 此处,可写可不写，感觉为了后面可能会加新的东西，写上比较好，由Mybatis对最后一个地方做处理 -->
+      </if>
+    </set>
+    <where>
+      <choose>
+        <when test="id != null">
+          id = #{id}
+        </when>
+        <when test="empNo != null">
+          empNo = #{empNo}
+        </when>
+        <otherwise></otherwise>
+      </choose>
+    </where>
+<!--    <where>-->
+<!--      <if test="id != null">-->
+<!--        id = #{id}-->
+<!--      </if>-->
+<!--      <if test="empNo != null">-->
+<!--        and empNo = #{empNo}-->
+<!--      </if>-->
+<!--    </where>-->
+  </select>
+  <select id="delete" resultType="com.daiwei.bean.Emp">
+    delete from emp where id = #{id}
+  </select>
+  <select id="selectEmpByEmpNo" resultType="com.daiwei.bean.Emp">
+    select * from emp where id = #{id}
+  </select>
+</mapper>

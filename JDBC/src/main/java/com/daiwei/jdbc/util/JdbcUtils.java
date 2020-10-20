@@ -3,6 +3,7 @@ package com.daiwei.jdbc.util;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.nio.charset.Charset;
@@ -21,8 +22,13 @@ public class JdbcUtils {
 
     static {
         ClassLoader classLoader = JdbcUtils.class.getClassLoader();
-        URL url1 = classLoader.getResource("jdbc.properties");
-        String path = URLDecoder.decode(url1.getPath(), Charset.defaultCharset());
+        URL url1 = classLoader.getResource("mysql.properties");
+        String path = null;
+        try {
+            path = URLDecoder.decode(url1.getPath(), "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
         try {
             Properties properties = new Properties();
             properties.load(new FileInputStream(path));

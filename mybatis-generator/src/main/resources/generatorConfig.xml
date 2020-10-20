@@ -1,0 +1,18 @@
+<!DOCTYPE generatorConfiguration PUBLIC
+  "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <properties resource="mysql.properties"></properties>
+  <context id="simple" targetRuntime="MyBatis3Simple">
+    <jdbcConnection driverClass="${driver}"
+      connectionURL="${url}" userId="${username}" password="${password}"/>
+    <javaModelGenerator targetPackage="com.daiwei.bean" targetProject="src/main/java"/>
+
+    <sqlMapGenerator targetPackage="com.daiwei.mapper" targetProject="src/main/resources"/>
+
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.daiwei.mapper" targetProject="src/main/java"/>
+
+    <table tableName="emp" />
+    <table tableName="dept"/>
+  </context>
+</generatorConfiguration>

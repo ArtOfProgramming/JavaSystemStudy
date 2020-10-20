@@ -15,6 +15,7 @@
     <module>ioc</module>
     <module>aop</module>
     <module>transaction</module>
+    <module>circle</module>
   </modules>
 
   <dependencies>

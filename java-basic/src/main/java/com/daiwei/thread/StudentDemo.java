@@ -1,6 +1,8 @@
 package com.daiwei.thread;
 
+import com.daiwei.thread.bean.MyCallableImpl;
 import com.daiwei.thread.bean.SaleTicketRunnableImpl;
+import java.util.concurrent.FutureTask;
 
 public class StudentDemo {
     public static void main(String[] args) {

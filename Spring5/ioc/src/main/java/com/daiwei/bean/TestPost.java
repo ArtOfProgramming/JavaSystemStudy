@@ -2,7 +2,9 @@ package com.daiwei.bean;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.stereotype.Component;
 
+@Component
 public class TestPost implements BeanPostProcessor {
 
     @Override

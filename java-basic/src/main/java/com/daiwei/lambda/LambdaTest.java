@@ -5,6 +5,8 @@ import com.daiwei.lambda.bean.Cook;
 import com.daiwei.lambda.bean.Person;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class LambdaTest {
 

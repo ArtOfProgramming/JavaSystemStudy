@@ -1,6 +1,8 @@
 package com.daiwei.iostream;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import org.openjdk.jol.info.ClassLayout;
 
 public class StreamTest {
@@ -58,8 +60,8 @@ public class StreamTest {
 
         // 序列化与反序列化
 
-//        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("D://学习//object.txt"));
-//        oos.writeObject(new Person("代维", 18));
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("D://学习//object.txt"));
+        oos.writeObject(new Person("代维", 18));
 //        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("D://学习//object.txt"));
 //        Person person;
 //        while (true) {
@@ -73,9 +75,9 @@ public class StreamTest {
 //            }
 //
 //        }
-//        oos.close();
+        oos.close();
 //        ois.close();
-        Person person = new Person("代维", 18);
-        System.out.println(ClassLayout.parseInstance(person).toPrintable());
+//        Person person = new Person("代维", 18);
+//        System.out.println(ClassLayout.parseInstance(person).toPrintable());
     }
 }
