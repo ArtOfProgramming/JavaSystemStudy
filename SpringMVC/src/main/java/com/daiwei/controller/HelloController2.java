@@ -30,9 +30,14 @@ public class HelloController2 {
 
 
     @RequestMapping("/hello")
-    public String hello3() {
+    public String hello2() {
         return "hello";
     }
+
+//    @RequestMapping("/hello3")
+//    public String hello3() {
+//        return "hello3";
+//    }
 
     @RequestMapping("/hello4")
     @ResponseBody

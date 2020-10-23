@@ -1,6 +1,6 @@
 package com.daiwei.druid.bean;
 
-public class Person {
+public class User {
 
     private int id;
     private String name;

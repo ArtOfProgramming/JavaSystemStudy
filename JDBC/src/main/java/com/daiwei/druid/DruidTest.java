@@ -1,6 +1,6 @@
 package com.daiwei.druid;
 
-import com.daiwei.druid.bean.Person;
+import com.daiwei.druid.bean.User;
 import com.daiwei.druid.util.JdbcUtils;
 import java.util.List;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -24,12 +24,12 @@ public class DruidTest {
 //                return person;
 //            }
 //        });
-        List<Person> list = jdbcTemplate.query("select * from user ", new BeanPropertyRowMapper<Person>(Person.class));
-        for (Person person : list) {
+        List<User> list = jdbcTemplate.query("select * from user ", new BeanPropertyRowMapper<User>(User.class));
+        for (User person : list) {
             System.out.println(person.toString());
         }
         while (true) {
-            for (Person person : list) {
+            for (User person : list) {
                 System.out.println(person.toString());
             }
             try {

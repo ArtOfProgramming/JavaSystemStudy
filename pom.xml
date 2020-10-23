@@ -3,6 +3,11 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.3.2.RELEASE</version>
+  </parent>
 
   <groupId>com.daiwei</groupId>
   <artifactId>JavaSystemStudy</artifactId>
@@ -26,6 +31,13 @@
     <module>SpringMVC</module>
     <module>mybatis</module>
     <module>mybatis-generator</module>
+    <module>ssm</module>
+    <module>mybatis-plus</module>
+    <module>mybatis-plus-generator</module>
+    <module>SpringBoot</module>
+    <module>mytest-spring-boot-starter</module>
+    <module>multidatasource-spring-boot-starter</module>
+    <module>multidatasource-spring-boot-starter-test</module>
   </modules>
 
 </project>

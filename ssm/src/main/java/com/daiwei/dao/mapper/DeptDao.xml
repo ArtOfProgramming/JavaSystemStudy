@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.daiwei.dao.DeptDao">
+  <!--  缓存-->
+  <cache type="org.mybatis.caches.ehcache.EhcacheCache"></cache>
+  <resultMap id="MyDeptDao" type="com.daiwei.bean.Dept">
+    <id property="deptNo" column="deptNo"></id>
+    <result property="id" column="id"></result>
+    <result property="dName" column="dName"></result>
+    <result property="ioc" column="ioc"></result>
+    <collection property="emps" ofType="com.daiwei.bean.Emp">
+      <id property="empNo" column="empNo"></id>
+      <result property="id" column="empId"></result>
+      <result property="empNo" column="empNo"></result>
+      <result property="eName" column="eName"></result>
+      <result property="job" column="job"></result>
+      <result property="mgr" column="mgr"></result>
+      <result property="hireDate" column="hireDate"></result>
+      <result property="sal" column="sal"></result>
+      <result property="comm" column="comm"></result>
+      <result property="deptNo" column="deptNo"></result>
+    </collection>
+  </resultMap>
+  <select id="selectAll" resultMap="MyDeptDao">
+    select *, b.id empId from dept a left join emp b on b.deptno = a.deptno
+  </select>
+</mapper>

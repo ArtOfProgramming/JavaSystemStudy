@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.daiwei.mapper.EmpMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.daiwei.bean.Emp">
+        <id column="id" property="id" />
+        <result column="empno" property="empno" />
+        <result column="ename" property="ename" />
+        <result column="job" property="job" />
+        <result column="mgr" property="mgr" />
+        <result column="hiredate" property="hiredate" />
+        <result column="sal" property="sal" />
+        <result column="comm" property="comm" />
+        <result column="deptno" property="deptno" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, empno, ename, job, mgr, hiredate, sal, comm, deptno
+    </sql>
+
+</mapper>

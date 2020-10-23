@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.daiwei.dao.DeptSelectDao">
+  <resultMap id="MyDeptDao1" type="com.daiwei.bean.Dept">
+    <id property="deptNo" column="deptNo"></id>
+    <result property="id" column="id"></result>
+    <result property="dName" column="dName"></result>
+    <result property="ioc" column="ioc"></result>
+    <collection property="emps" ofType="com.daiwei.bean.Emp" select="selectEmpByDeptNo" column="deptNo">
+    </collection>
+  </resultMap>
+  <select id="selectDeptAll" resultMap="MyDeptDao1">
+    select * from dept
+  </select>
+  <select id="selectEmpByDeptNo" resultType="com.daiwei.bean.Emp">
+    select * from emp where deptNo = #{deptNo}
+  </select>
+</mapper>

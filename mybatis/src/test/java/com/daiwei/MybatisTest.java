@@ -58,8 +58,11 @@ public class MybatisTest {
             throw new NullPointerException();
         }
         EmpDao empDao = sqlSession.getMapper(EmpDao.class);
-        empDao.save(new Emp(123, "hello", "nihao", 123, new Date(), 123.1, 32432.1, 1));
-        empDao.save(new Emp(123, "hello1", "nihao2", 123, new Date(), 123.1, 32432.1, 1));
+        Emp emp = new Emp(123, "hello", "nihao", 123, new Date(), 123.1, 32432.1, 1);
+        empDao.save(emp);
+        System.out.println(emp.getId());
+
+//        empDao.save(new Emp(123, "hello1", "nihao2", 123, new Date(), 123.1, 32432.1, 1));
     }
 
     @Test
